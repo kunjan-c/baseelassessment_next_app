@@ -1,9 +1,23 @@
+"use client"
+import Header from '@/components/header/header'
+import UserForm from '@/components/userForm/userForm'
 import React from 'react'
 
-const page = () => {
+const About = () => {
+  const handleSubmit = (formData) => {
+   console.log(formData)
+  
+  };
   return (
-    <div>About</div>
+    <>
+    <Header></Header>
+    <div>
+    <UserForm onFormSubmit={handleSubmit} formText="Create New User"></UserForm>
+    </div>
+    
+    </>
+   
   )
 }
 
-export default page
+export default About

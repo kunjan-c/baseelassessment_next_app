@@ -1,67 +1,59 @@
-"use client";
+
+import Link from "next/link";
 import styles from "./page.module.css";
 import Header from "@/components/header/header";
-import { useEffect, useState } from "react";
+import SectionTitle from "@/components/sectionTitle/sectionTitle";
+import ContentWrapper from "@/components/contentWrapper/contentWrapper";
 
-
-
-export default function Home() {
-  const [userListdata, setUserListdata] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    fetchUserlistData()
-  }, [])
-
-  const fetchUserlistData = async () => {
-    try {
-      setIsLoading(true)
-      const result = await fetch('https://jsonplaceholder.typicode.com/users');
-      const data = await result?.json()
-      if (data) {
-        setUserListdata(data)
-      }
-      console.log(data);
-      setIsLoading(false)
-    } catch (error) {
-      console.log(error);
-      setIsLoading(false)
-    }
-
+async function getData() {
+  const res = await fetch('https://jsonplaceholder.typicode.com/users')
+  if (!res.ok) {
+    throw new Error('Failed to fetch data')
   }
+
+  return res.json()
+}
+
+
+export default async function Home() {
+  const users = await getData()
 
   return (
     <>
       <Header></Header>
-
+      <ContentWrapper>
+      <SectionTitle sectionText="User List"></SectionTitle>
       {
-        isLoading ? <div>Loading...</div> :
-          userListdata.length > 0 &&
+        users?.map((data, i) => {
+          return (
+          
+          <div key={data.id} className={styles["boxcard-container"]} >
+           
+              <Link className={styles["view-detail-text"]} href={`/${data.id}`}>View Detail</Link>
+           
+            <div className={styles["detail-row-container"]}>
+              <div className={styles["card-label"]} >Name : </div>
+              <div className={styles["card-label-value"]} >{data.name}</div>
+            </div>
+            <div className={styles["detail-row-container"]}>
 
-          userListdata?.map((data, i) => {
-            return (<div key={data.id} className={styles["boxcard-container"]} >
-              <div className={styles["detail-row-container"]}>
-                <div className={styles["card-label"]} >Name : </div>
-                <div className={styles["card-label-value"]} >{data.name}</div>
-              </div>
-              <div className={styles["detail-row-container"]}>
+              <div className={styles["card-label"]}>Email: </div>
+              <div className={styles["card-label-value"]}>{data.email}</div>
+            </div>
+            <div className={styles["detail-row-container"]}>
 
-                <div className={styles["card-label"]}>Email: </div>
-                <div className={styles["card-label-value"]}>{data.email}</div>
-              </div>
-              <div className={styles["detail-row-container"]}>
-
-                <div className={styles["card-label"]} >Website: </div>
-                <div className={styles["card-label-value"]} >{data.website}</div>
-              </div>
-            </div>)
-          })
-
+              <div className={styles["card-label"]} >Website: </div>
+              <div className={styles["card-label-value"]} >{data.website}</div>
+            </div>
+          </div>)
+        })
+       
 
 
 
       }
 
+ </ContentWrapper>
     </>
   );
 }

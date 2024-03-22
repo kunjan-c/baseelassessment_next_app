@@ -1,5 +1,5 @@
+
 .boxcard-container {
-  width: 80%;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -29,3 +29,10 @@
   font-weight: 400;
   text-align: left;
 }
+
+.view-detail-text{
+  text-align: right;
+  text-decoration: underline;
+  color: rgb(73, 128, 196);
+}
+
