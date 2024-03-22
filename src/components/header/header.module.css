@@ -7,12 +7,17 @@
     position: sticky;
     z-index: 100;
     top: 0;
-    background-color: #3A7FC1;
+    /* background-color: #3A7FC1; */
+    background-color: #01192A;
     margin-bottom: 50px;
+    padding: 0px 40px;
 
 
 }
-
+.header-container  a{
+    color: white;
+}
 .header-options {
-    padding: 0px 16px
+    padding: 0px 16px;
+
 }
