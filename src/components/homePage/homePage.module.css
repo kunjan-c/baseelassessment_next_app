@@ -1,0 +1,39 @@
+
+
+.boxcard-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 24px;
+    min-height: 150px;
+    justify-content: center;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    padding: 10px 24px;
+    border-radius: 10px;
+  }
+  .detail-row-container{
+    padding: 10px 0px ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .card-label {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .card-label-value {
+    flex: 9;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+  }
+  
+  .view-detail-text{
+    text-align: right;
+    text-decoration: underline;
+    color: rgb(73, 128, 196);
+  }
+  
+  

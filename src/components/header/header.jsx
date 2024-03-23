@@ -22,7 +22,7 @@ const Header = () => {
         {
         
             headerOptions.length && headerOptions.map((op )=> 
-                <div className={styles["header-options"]} id={op.id} key={op.id}  ><Link href={op.link}>{op.title}</Link></div>
+                <div className={styles["header-options"]} id={op.id} key={op.id}  ><Link href={op.link} scroll={false}>{op.title}</Link></div>
 
             )
 

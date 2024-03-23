@@ -55,7 +55,9 @@
     margin-top: 20px;
   
   }
-  
+  .error{
+    color: red;
+  }
   /* Media Query for Responsive  */
   @media screen and (max-width: 500px) {
     .form-container {

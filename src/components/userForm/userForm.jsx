@@ -1,11 +1,11 @@
 "use client"
 import { useState } from 'react';
 import styles from "./userForm.module.css";
-import Link from 'next/link';
-import SectionTitle from '../sectionTitle/sectionTitle';
-
+import Link from "next/link";
+import SectionTitle from "../sectionTitle/sectionTitle";
+import { useRouter } from "next/navigation"
 const UserForm = ({ onFormSubmit, formText }) => {
-
+  const router = useRouter()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,13 +22,14 @@ const UserForm = ({ onFormSubmit, formText }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+   
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
       onFormSubmit(formData);
-
+      router.push('/', { scroll: false })
     }
   };
 
@@ -54,7 +55,7 @@ const UserForm = ({ onFormSubmit, formText }) => {
 
     // Validate Message
     if (!formData.message.trim()) {
-      newErrors.role = 'Message is required';
+      newErrors.message = 'Message is required';
       valid = false;
     }
 
@@ -71,8 +72,8 @@ const UserForm = ({ onFormSubmit, formText }) => {
 
         <div className={styles["user-creation-form-group"]}>
           <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" value={formData.username} onChange={handleChange} />
-          {errors.name && <div className={styles["error"]}>{errors.username}</div>}
+          <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
+          {errors.name && <div className={styles["error"]}>{errors.name}</div>}
         </div>
         <div className={styles["user-creation-form-group"]}>
           <label htmlFor="email">Email:</label>

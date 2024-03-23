@@ -27,7 +27,7 @@ The application will be accessible at `http://localhost:3000`.
 
 ## Folder Structure
 
-- `/pages`: Contains Next.js page components.
+- `/app`: Contains Next.js pages components.
 - `/components`: Contains reusable React components.
 - `/public`: Contains static assets.
 
@@ -39,8 +39,10 @@ The application will be accessible at `http://localhost:3000`.
 
 ## API Endpoints
 
-- **GET /users/:id**: Fetches details of a specific user by ID.
-- **POST /contact**: Submits a contact form with name, email, and message fields.
+- https://jsonplaceholder.typicode.com/users:: Fetches UserList which contains user data.
+- https://jsonplaceholder.typicode.com/users/:id: Fetches details of a specific user by ID.
+
+- Contact FORM Submission: Logs the form data (name, email, and message) to the console..
 
 ## External Services
 
