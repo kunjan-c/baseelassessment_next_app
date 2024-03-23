@@ -66,7 +66,7 @@ const UserForm = ({ onFormSubmit, formText }) => {
 
   return (
     <div className={styles["form-container"]}>
-      <Link href="/"><div className={styles["close-icon"]}>&times;</div></Link>
+      <Link href="/" scroll={false}><div className={styles["close-icon"]}>&times;</div></Link>
       <SectionTitle sectionText="Create New User"></SectionTitle>
       <form onSubmit={handleSubmit}>
 

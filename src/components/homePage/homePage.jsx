@@ -29,7 +29,7 @@ export default async function HomePageContent() {
 
               <div key={data.id} className={styles["boxcard-container"]} >
 
-                <Link className={styles["view-detail-text"]} href={`/${data.id}`}>View Detail</Link>
+                <Link className={styles["view-detail-text"]} href={`/${data.id}`} scroll={false}>View Detail</Link>
 
                 <Link  href={`/${data.id}`}>
                   <div className={styles["detail-row-container"]}>

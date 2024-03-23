@@ -6,7 +6,7 @@ import Link from "next/link";
 const Deatilcard = ({ userDetail ,title}) => {
     return (
         <div className={styles["user-detail-container"]}>
-            <div className={styles["close-icon"]}> <Link href="/">&times;</Link></div>
+            <div className={styles["close-icon"]}> <Link href="/" scroll={false}>&times;</Link></div>
             <SectionTitle  sectionText={title}></SectionTitle>
       
             <div className={styles["user-detail-content"]}>
