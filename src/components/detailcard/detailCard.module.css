@@ -1,39 +1,61 @@
-
-.user-detail-container{
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    margin: auto;
-    padding: 24px;
-    width: 60%;
-    margin-top: 100px;
-    min-height: 400px;
+.user-detail-container {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin: auto;
+  padding: 24px;
+  width: 70%;
+  margin-top: 100px;
+  min-height: 400px;
 
 }
 
-.user-detail-text{
+.user-detail-text {
   padding: 20px 0px;
   font-size: 24px;
 }
-.user-detail-content{
-display: flex;
-flex-direction: row;
-padding: 20px 0px;
-}
-.user-detail-content-label{
- padding-right: 40px;
- font-weight: 600;
- flex: 1;
-}
-.user-detail-content-label-value{
 
- text-align: start;
- flex: 9;
+.user-detail-content {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0px;
 }
- .close-icon {
+
+.user-detail-content-label {
+  padding-right: 40px;
+  font-weight: 600;
+  flex: 1;
+}
+
+.user-detail-content-label-value {
+
+  text-align: start;
+  flex: 9;
+}
+
+.close-icon {
   font-size: 26px;
   text-align: end;
   color: black;
   text-decoration: none;
+}
+
+
+
+
+@media only screen and (max-width: 1200px) {
+  .user-detail-container {
+    padding: 24px;
+    margin-top: 60px;
+   width: auto;
+  }
+}
+
+@media only screen and (max-width: 724px) {
+  .user-detail-container {
+    padding: 24px;
+    margin-top: 40px;
+    width: auto;
+  }
 }
