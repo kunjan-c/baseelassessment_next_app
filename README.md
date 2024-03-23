@@ -7,6 +7,9 @@ This repository contains a Next.js project that implements dynamic routing, data
 ## Setup
 
 1. **Clone the repository:**
+ 
+ https://github.com/kunjan-c/baseelassessment_next_app.git
+
 
 2. **Install dependencies:**
 
@@ -15,7 +18,7 @@ npm install
 
 3. **Run the development server:**
 
-
+command - npm run dev
 The application will be accessible at `http://localhost:3000`.
 
 ## Features
@@ -35,9 +38,9 @@ The application will be accessible at `http://localhost:3000`.
 
 - Next.js: Framework for React applications.
 - React: JavaScript library for building user interfaces.
-- Other dependencies (list any additional dependencies used).
 
-## API Endpoints
+
+## API 
 
 - https://jsonplaceholder.typicode.com/users:: Fetches UserList which contains user data.
 - https://jsonplaceholder.typicode.com/users/:id: Fetches details of a specific user by ID.
