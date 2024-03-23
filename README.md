@@ -47,6 +47,9 @@ The application will be accessible at `http://localhost:3000`.
 
 - Contact FORM Submission: Logs the form data (name, email, and message) to the console..
 
+## Styling
+- CSS module is used for styling 
+
 ## External Services
 
 - **JSONPlaceholder API**: Used for fetching user data.
