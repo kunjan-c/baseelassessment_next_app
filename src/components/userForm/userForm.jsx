@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from "./userForm.module.css";
 import Link from 'next/link';
 import SectionTitle from '../sectionTitle/sectionTitle';

@@ -1,7 +1,7 @@
-import React from 'react'
+
 import styles from "./detailCard.module.css";
-import SectionTitle from '../sectionTitle/sectionTitle';
-import Link from 'next/link';
+import SectionTitle from "../sectionTitle/sectionTitle";
+import Link from "next/link";
 
 const Deatilcard = ({ userDetail ,title}) => {
     return (
